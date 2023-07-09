@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+  <!-- we import arjs version without NFT but with marker + location based support -->
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  <body style="margin: 0px; overflow: hidden">
+    <a-scene
+      embedded
+      arjs="sourceWidth:1700; sourceHeight:1280; displayWidth: 1700; displayHeight: 1280;"
+    >
+      <a-marker preset="hiro">
+        <a-plane
+          id="myPlane"
+          rotation="-90 0 0"
+          scale="0.05 0.05 0.05"
+          position="0 0 0"
+          width="0"
+          height="0"
+          color="red"
+          animation__height="property: height;from:0; to: 20; dur: 2000; easing: linear;"
+          animation__width="property: width;from:0; to: 20; dur: 2000; easing: linear;"
+        >
+        </a-plane>
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
